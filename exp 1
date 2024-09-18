@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and author information -->
+    <meta charset="UTF-8">
+    <meta name="author" content="John Doe">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Web Development">
+    
+    <!-- Title of the webpage -->
+    <title>Another Sample Page</title>
+    
+    <!-- Link to an external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Inline CSS for quick styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+    
+    <!-- External JavaScript file -->
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Another Web Page Example</h1>
+    </header>
+
+    <main>
+        <p>This is an example of a basic webpage with various header elements.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 John Doe</p>
+    </footer>
+</body>
+</html>
