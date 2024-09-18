@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background GIF with CSS Effects</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            background: url('your-background.gif') no-repeat center center fixed;
+            background-size: 100% 100%;
+            transition: background-size 1s ease, opacity 1s ease;
+            opacity: 0.9;
+        }
+
+        body:hover {
+            background-size: 120% 120%; /* Increases GIF size on hover */
+            opacity: 0.7; /* Decreases opacity on hover */
+        }
+
+        .content {
+            color: white;
+            text-align: center;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Welcome to My Web Page</h1>
+        <p>This page has a background GIF with CSS effects.</p>
+    </div>
+</body>
+</html>
