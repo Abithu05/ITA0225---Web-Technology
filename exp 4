@@ -1,0 +1,35 @@
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/RegisterServlet")
+public class RegisterServlet extends HttpServlet {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Display form
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        out.println("<form action='RegisterServlet' method='post'>"
+                + "Name: <input type='text' name='name'><br>"
+                + "Email: <input type='email' name='email'><br>"
+                + "Course: <input type='text' name='course'><br>"
+                + "Year: <input type='number' name='year'><br>"
+                + "<input type='submit' value='Register'></form>");
+        out.close();
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Process and display submitted data
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        out.println("<h1>Registration Details</h1>"
+                + "Name: " + request.getParameter("name") + "<br>"
+                + "Email: " + request.getParameter("email") + "<br>"
+                + "Course: " + request.getParameter("course") + "<br>"
+                + "Year: " + request.getParameter("year"));
+        out.close();
+    }
+}
