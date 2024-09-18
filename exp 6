@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS with Class Selectors</title>
+    <style>
+        .header { background-color: lightblue; padding: 20px; text-align: center; }
+        .main-title { font-size: 2em; color: navy; }
+        .navbar ul { list-style-type: none; padding: 0; background-color: darkgray; text-align: center; }
+        .nav-item { display: inline; margin: 10px; }
+        .nav-item a { text-decoration: none; color: white; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="main-title">Welcome to My Web Page</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li class="nav-item"><a href="#">Home</a></li>
+            <li class="nav-item"><a href="#">About</a></li>
+            <li class="nav-item"><a href="#">Services</a></li>
+            <li class="nav-item"><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
