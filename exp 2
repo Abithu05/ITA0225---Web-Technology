@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Nearest Odd Number</title>
+    <script>
+        function findNearestOdd() {
+            // Get the number entered by the user
+            let number = parseInt(document.getElementById("userNumber").value);
+            
+            let nearestOdd;
+
+            // If the number is even
+            if (number % 2 === 0) {
+                // Find the nearest odd number by subtracting 1 or adding 1
+                let lowerOdd = number - 1;
+                let higherOdd = number + 1;
+
+                // Select the nearest odd based on proximity (both will be equally close for even numbers)
+                nearestOdd = lowerOdd;
+            } else {
+                // If the number is already odd, it's the nearest odd number
+                nearestOdd = number;
+            }
+
+            // Display the result
+            document.getElementById("result").innerText = "The nearest odd number is: " + nearestOdd;
+        }
+    </script>
+</head>
+<body>
+    <h1>Find Nearest Odd Number</h1>
+
+    <label for="userNumber">Enter a number:</label>
+    <input type="number" id="userNumber" />
+    
+    <button onclick="findNearestOdd()">Find Nearest Odd</button>
+
+    <p id="result"></p>
+</body>
+</html>
