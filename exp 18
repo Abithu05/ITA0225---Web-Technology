@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .box {
+            width: 300px; /* Width of the content area */
+            padding: 20px; /* Padding inside the box */
+            border: 5px solid #007BFF; /* Border around the box */
+            margin: 20px; /* Margin outside the box */
+            background-color: #e9ecef; /* Background color of the box */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        }
+
+        .header {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px; /* Margin for spacing */
+        }
+
+        .content {
+            color: #555;
+            margin-bottom: 10px; /* Margin for spacing */
+        }
+
+        .footer {
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Understanding the CSS Box Model</h1>
+
+    <div class="box">
+        <div class="header">Header</div>
+        <div class="content">This is the content area. The width of this box is defined by the width property, including the padding and border.</div>
+        <div class="footer">Footer</div>
+    </div>
+
+    <div class="box">
+        <div class="header">Another Box</div>
+        <div class="content">Margins create space outside of the box. This box is styled to demonstrate the box model visually.</div>
+        <div class="footer">Footer</div>
+    </div>
+
+</body>
+</html>
