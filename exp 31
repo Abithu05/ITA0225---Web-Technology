@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Date and Time</title>
+    <script>
+        function displayDateTime() {
+            // Create a new Date object
+            const now = new Date();
+
+            // Get the current date and time
+            const options = {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true // Use 12-hour format
+            };
+            const formattedDateTime = now.toLocaleString('en-US', options);
+
+            // Display the current date and time in the HTML element
+            document.getElementById('dateTimeDisplay').innerText = formattedDateTime;
+        }
+
+        // Call the function to display date and time when the page loads
+        window.onload = displayDateTime;
+    </script>
+</head>
+<body>
+    <h1>Current Date and Time</h1>
+    <p id="dateTimeDisplay"></p>
+</body>
+</html>
