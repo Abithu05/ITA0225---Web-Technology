@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frameset Example</title>
+</head>
+<frameset rows="50%,50%">
+    <frame src="data:text/html;charset=UTF-8,<html><head><title>Top Frame</title></head><body><h1>This is the Top Frame</h1><p>Welcome to the top frame of the page!</p></body></html>" name="topFrame" />
+    <frame src="data:text/html;charset=UTF-8,<html><head><title>Bottom Frame</title></head><body><h1>This is the Bottom Frame</h1><p>Welcome to the bottom frame of the page!</p></body></html>" name="bottomFrame" />
+</frameset>
+</html>
