@@ -1,0 +1,35 @@
+<%@ page import="javax.servlet.http.HttpSession" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Counter</title>
+</head>
+<body>
+    <h1>Welcome to My Website!</h1>
+
+    <%
+        // Get the current session, create one if it doesn't exist
+        HttpSession session = request.getSession(true);
+
+        // Application scope to store the visitor count
+        Integer visitorCount = (Integer) application.getAttribute("visitorCount");
+
+        // Initialize visitor count if this is the first time it's accessed
+        if (visitorCount == null) {
+            visitorCount = 0;
+        }
+
+        // If this is a new session (new user), increment the visitor count
+        if (session.isNew()) {
+            visitorCount++;
+            application.setAttribute("visitorCount", visitorCount);
+        }
+
+        // Display the number of visitors
+        out.println("<p>You are visitor number: " + visitorCount + "</p>");
+    %>
+</body>
+</html>
