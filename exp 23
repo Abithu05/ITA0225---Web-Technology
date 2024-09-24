@@ -1,0 +1,53 @@
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/Dishes")
+public class DishesServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+
+        // HTML form to select dishes
+        out.println("<html><head><title>Select Dishes</title></head><body>");
+        out.println("<h1>Select Dishes</h1>");
+        out.println("<form action='Dishes' method='post'>");
+        out.println("<input type='checkbox' name='dishes' value='Pasta'> Pasta<br>");
+        out.println("<input type='checkbox' name='dishes' value='Pizza'> Pizza<br>");
+        out.println("<input type='checkbox' name='dishes' value='Salad'> Salad<br>");
+        out.println("<input type='checkbox' name='dishes' value='Steak'> Steak<br>");
+        out.println("<input type='checkbox' name='dishes' value='Dessert'> Dessert<br>");
+        out.println("<input type='submit' value='Confirm Dishes'>");
+        out.println("</form></body></html>");
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+
+        // Get the selected dishes from the request
+        String[] selectedDishes = request.getParameterValues("dishes");
+
+        out.println("<html><body>");
+        out.println("<h1>Confirmed Dishes</h1>");
+
+        if (selectedDishes != null && selectedDishes.length > 0) {
+            out.println("<ul>");
+            for (String dish : selectedDishes) {
+                out.println("<li>" + dish + "</li>");
+            }
+            out.println("</ul>");
+        } else {
+            out.println("<p>No dishes selected.</p>");
+        }
+
+        out.println("<a href='Dishes'>Go back</a>"); // Link to go back to selection
+        out.println("</body></html>");
+    }
+}
