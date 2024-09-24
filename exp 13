@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Example with CSS</title>
+    <style>
+        /* Internal CSS */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        .main-content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        article {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Blog</h1>
+        <p>Your daily dose of information</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="main-content">
+        <article style="border-left: 5px solid #007BFF;"> <!-- Inline CSS for border -->
+            <h2 style="color: #007BFF;">First Blog Post</h2> <!-- Inline CSS for text color -->
+            <p>This is the first blog post. It talks about various interesting topics.</p>
+            <p style="font-style: italic;">Stay tuned for more updates!</p> <!-- Inline CSS for italic -->
+        </article>
+
+        <article style="border-left: 5px solid #28A745;"> <!-- Inline CSS for border -->
+            <h2 style="color: #28A745;">Second Blog Post</h2> <!-- Inline CSS for text color -->
+            <p>This is the second blog post. We cover more fascinating subjects.</p>
+            <p style="font-weight: bold;">Don't miss out!</p> <!-- Inline CSS for font weight -->
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Blog</p>
+    </footer>
+
+</body>
+</html>
