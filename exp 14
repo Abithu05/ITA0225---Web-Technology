@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlay Elements with Absolute Positioning</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Container to hold the boxes */
+        .container {
+            position: relative; /* Position relative for absolute children */
+            width: 300px;
+            height: 200px;
+            margin: 50px auto;
+            border: 2px solid #333;
+            background-color: #fff;
+        }
+
+        /* Box 1 styling */
+        .box1 {
+            position: absolute; /* Absolute positioning */
+            top: 20px; /* Distance from the top */
+            left: 20px; /* Distance from the left */
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 99, 71, 0.7); /* Semi-transparent red */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+
+        /* Box 2 styling */
+        .box2 {
+            position: absolute; /* Absolute positioning */
+            top: 50px; /* Overlapping with Box 1 */
+            left: 50px; /* Overlapping with Box 1 */
+            width: 100px;
+            height: 100px;
+            background-color: rgba(30, 144, 255, 0.7); /* Semi-transparent blue */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box1">Box 1</div>
+        <div class="box2">Box 2</div>
+    </div>
+
+</body>
+</html>
