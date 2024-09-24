@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Example</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Full height for the background image */
+            background-image: url('https://via.placeholder.com/150'); /* Replace with your image URL */
+            background-repeat: repeat; /* Repeat the background image */
+            background-size: auto; /* Default size */
+        }
+
+        /* Container for content */
+        .content {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 50px auto; /* Center the content */
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>Welcome to My Web Page</h1>
+        <p>This page demonstrates how to use a background image with CSS.</p>
+        <p>The background image repeats to fill the entire page.</p>
+    </div>
+
+</body>
+</html>
