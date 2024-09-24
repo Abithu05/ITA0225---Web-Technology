@@ -1,0 +1,47 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration</title>
+</head>
+<body>
+    <h2>Employee Registration Form</h2>
+    <form action="employeeRegistration.jsp" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="department">Department:</label><br>
+        <input type="text" id="department" name="department" required><br><br>
+        
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob" required><br><br>
+        
+        <input type="submit" value="Register">
+    </form>
+
+    <%
+        // Handle form submission
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+        String department = request.getParameter("department");
+        String dob = request.getParameter("dob");
+
+        // Display the submitted data if the form has been submitted
+        if (name != null && email != null && department != null && dob != null) {
+    %>
+        <h2>Registration Successful!</h2>
+        <h3>Collected Information:</h3>
+        <p><strong>Name:</strong> <%= name %></p>
+        <p><strong>Email:</strong> <%= email %></p>
+        <p><strong>Department:</strong> <%= department %></p>
+        <p><strong>Date of Birth:</strong> <%= dob %></p>
+    <%
+        }
+    %>
+</body>
+</html>
