@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Object Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>String Object Operations</h1>
+
+    <!-- Operation 1: Character at a specified location -->
+    <div>
+        <h2>1. Character at Specified Location</h2>
+        <input type="text" id="stringInput1" placeholder="Enter a string">
+        <input type="number" id="charIndex" placeholder="Character index">
+        <button onclick="getCharacter()">Get Character</button>
+    </div>
+
+    <!-- Operation 2: Unicode of character -->
+    <div>
+        <h2>2. Unicode of Character</h2>
+        <input type="text" id="stringInput2" placeholder="Enter a string">
+        <input type="number" id="unicodeIndex" placeholder="Character index">
+        <button onclick="getUnicode()">Get Unicode</button>
+    </div>
+
+    <!-- Operation 3: Join Strings -->
+    <div>
+        <h2>3. Join Two or More Strings</h2>
+        <input type="text" id="stringJoin1" placeholder="Enter first string">
+        <input type="text" id="stringJoin2" placeholder="Enter second string">
+        <button onclick="joinStrings()">Join Strings</button>
+    </div>
+
+    <!-- Operation 4: Convert Unicode to String -->
+    <div>
+        <h2>4. Convert Unicode to String</h2>
+        <input type="number" id="unicodeValue" placeholder="Enter unicode value">
+        <button onclick="convertUnicodeToString()">Convert to String</button>
+    </div>
+
+    <!-- Operation 5: Convert String to Uppercase -->
+    <div>
+        <h2>5. Convert String to Uppercase</h2>
+        <input type="text" id="stringInput3" placeholder="Enter a string">
+        <button onclick="convertToUppercase()">Convert to Uppercase</button>
+    </div>
+
+    <div id="result"></div>
+
+    <script>
+        // (1) Return the character at a specified location
+        function getCharacter() {
+            const str = document.getElementById("stringInput1").value;
+            const index = parseInt(document.getElementById("charIndex").value);
+            const char = str.charAt(index);
+            document.getElementById("result").innerText = `Character at index ${index}: ${char}`;
+        }
+
+        // (2) Returns the Unicode of the character at the specified index
+        function getUnicode() {
+            const str = document.getElementById("stringInput2").value;
+            const index = parseInt(document.getElementById("unicodeIndex").value);
+            const unicode = str.charCodeAt(index);
+            document.getElementById("result").innerText = `Unicode at index ${index}: ${unicode}`;
+        }
+
+        // (3) Joins two or more strings and returns a new joined string
+        function joinStrings() {
+            const str1 = document.getElementById("stringJoin1").value;
+            const str2 = document.getElementById("stringJoin2").value;
+            const joinedString = str1 + str2; // You can also use str1.concat(str2);
+            document.getElementById("result").innerText = `Joined String: ${joinedString}`;
+        }
+
+        // (4) Converts Unicode value to string
+        function convertUnicodeToString() {
+            const unicode = parseInt(document.getElementById("unicodeValue").value);
+            const char = String.fromCharCode(unicode);
+            document.getElementById("result").innerText = `Character from Unicode ${unicode}: ${char}`;
+        }
+
+        // (5) Converts a string to uppercase letters
+        function convertToUppercase() {
+            const str = document.getElementById("stringInput3").value;
+            const upperStr = str.toUpperCase();
+            document.getElementById("result").innerText = `Uppercase String: ${upperStr}`;
+        }
+    </script>
+</body>
+</html>
