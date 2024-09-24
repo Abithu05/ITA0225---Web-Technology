@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Example</title>
+    <style>
+        /* Container to center the emojis */
+        .emoji-container {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center;     /* Center vertically */
+            height: 100vh;          /* Full viewport height */
+            background-color: #f0f0f0;
+        }
+
+        /* Styling for emojis */
+        .emoji {
+            font-size: 50px;         /* Fixed size for emojis */
+            margin: 10px;            /* Space between emojis */
+        }
+    </style>
+</head>
+<body>
+    <div class="emoji-container">
+        <span class="emoji">&#x1F600;</span>  <!-- Grinning Face -->
+        <span class="emoji">&#x1F601;</span>  <!-- Grinning Face with Smiling Eyes -->
+        <span class="emoji">&#x1F602;</span>  <!-- Face with Tears of Joy -->
+        <span class="emoji">&#x1F603;</span>  <!-- Smiling Face with Open Mouth -->
+        <span class="emoji">&#x1F604;</span>  <!-- Smiling Face with Open Mouth and Smiling Eyes -->
+    </div>
+</body>
+</html>
